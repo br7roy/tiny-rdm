@@ -1,6 +1,6 @@
 <div>
-<h1> 就是一个干光所有广告的版本 nbsp;
- 我特么随便用用，凭什么给我喂广告！</h1>
+<h1> 就是一个干光所有广告的版本 </h1> 
+<h1></h1> 我特么随便用用，凭什么给我喂广告！</h1>
 </div>
 <div align="center">
 <a href="https://github.com/tiny-craft/tiny-rdm/"><img src="build/appicon.png" width="120"/></a>
