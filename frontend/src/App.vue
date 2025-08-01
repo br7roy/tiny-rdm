@@ -22,7 +22,6 @@ import ExportKeyDialog from '@/components/dialogs/ExportKeyDialog.vue'
 import ImportKeyDialog from '@/components/dialogs/ImportKeyDialog.vue'
 import { Info } from 'wailsjs/go/services/systemService.js'
 import DecoderDialog from '@/components/dialogs/DecoderDialog.vue'
-import { loadModule, trackEvent } from '@/utils/analytics.js'
 
 const prefStore = usePreferencesStore()
 const connectionStore = useConnectionStore()
@@ -37,12 +36,6 @@ onMounted(async () => {
         if (prefStore.autoCheckUpdate) {
             prefStore.checkForUpdate()
         }
-        const env = await Environment()
-        loadModule(env.buildType !== 'dev' && prefStore.general.allowTrack !== false).then(() => {
-            Info().then(({ data }) => {
-                trackEvent('startup', data, true)
-            })
-        })
 
         // show greetings and user behavior tracking statements
         if (!!!prefStore.behavior.welcomed) {

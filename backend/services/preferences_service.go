@@ -222,11 +222,7 @@ func (p *preferencesService) GetDecoder() []convutil.CmdConvert {
 	})
 }
 
-type sponsorItem struct {
-	Name   string   `json:"name"`
-	Link   string   `json:"link"`
-	Region []string `json:"region"`
-}
+
 
 type upgradeInfo struct {
 	Version      string            `json:"version"`
@@ -234,7 +230,7 @@ type upgradeInfo struct {
 	Description  map[string]string `json:"description"`
 	DownloadURl  map[string]string `json:"download_url"`
 	DownloadPage map[string]string `json:"download_page"`
-	Sponsor      []sponsorItem     `json:"sponsor,omitempty"`
+
 }
 
 func (p *preferencesService) CheckForUpdate() (resp types.JSResp) {
@@ -260,7 +256,7 @@ func (p *preferencesService) CheckForUpdate() (resp types.JSResp) {
 		"latest":        respObj.Version,
 		"description":   respObj.Description,
 		"download_page": respObj.DownloadPage,
-		"sponsor":       respObj.Sponsor,
+
 	}
 	return
 }

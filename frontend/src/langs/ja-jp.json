@@ -167,10 +167,7 @@
   "ribbon": {
     "server": "サーバー",
     "browser": "データ ブラウザ",
-    "log": "ログ",
-    "wechat_official": "Wechat 公式アカウント",
-    "follow_x": "私の \uD835\uDD4F をフォローする",
-    "github": "Github"
+    "log": "ログ"
   },
   "dialogue": {
     "close_confirm": "この接続（{name}）を閉じますか？",

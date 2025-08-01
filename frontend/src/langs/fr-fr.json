@@ -167,10 +167,7 @@
   "ribbon": {
     "server": "Serveur",
     "browser": "Navigateur de données",
-    "log": "Journal",
-    "wechat_official": "Compte officiel WeChat",
-    "follow_x": "Suivre \uD835\uDD4F",
-    "github": "Github"
+    "log": "Journal"
   },
   "dialogue": {
     "close_confirm": "Fermer cette connexion ({name}) ?",

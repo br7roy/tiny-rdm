@@ -167,10 +167,8 @@
   "ribbon": {
     "server": "서버",
     "browser": "데이터 브라우저",
-    "log": "로그",
-    "wechat_official": "공식 계정",
-    "follow_x": "팔로우 \uD835\uDD4F",
-    "github": "Github"
+    "log": "로그"
+    
   },
   "dialogue": {
     "close_confirm": "이 연결({name})을 종료하시겠습니까?",

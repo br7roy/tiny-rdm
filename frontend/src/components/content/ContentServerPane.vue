@@ -11,9 +11,7 @@ const themeVars = useThemeVars()
 const dialogStore = useDialogStore()
 const prefStore = usePreferencesStore()
 
-const onOpenSponsor = (link) => {
-    BrowserOpenURL(link)
-}
+
 
 const openBanner = (link) => {
     BrowserOpenURL(link)
@@ -24,18 +22,7 @@ const skipBanner = () => {
     localStorage.setItem('banner_next_time', Date.now() + 30 * 24 * 60 * 60 * 1000)
 }
 
-const sponsorAd = computed(() => {
-    try {
-        const content = localStorage.getItem('sponsor_ad')
-        const ads = JSON.parse(content)
-        const ad = find(ads, ({ region }) => {
-            return isEmpty(region) || includes(region, prefStore.currentLanguage)
-        })
-        return ad || null
-    } catch {
-        return null
-    }
-})
+
 
 const banner = computed(() => {
     try {
@@ -96,9 +83,7 @@ const banner = computed(() => {
             </template>
         </n-empty>
 
-        <n-button v-if="sponsorAd != null" class="sponsor-ad" style="" text @click="onOpenSponsor(sponsorAd.link)">
-            {{ sponsorAd.name }}
-        </n-button>
+
     </div>
 </template>
 
@@ -118,12 +103,7 @@ const banner = computed(() => {
         width: 100%;
     }
 
-    & > .sponsor-ad {
-        text-align: center;
-        margin-top: 20px;
-        vertical-align: bottom;
-        color: v-bind('themeVars.textColor3');
-    }
+
 }
 
 .color-preset-item {

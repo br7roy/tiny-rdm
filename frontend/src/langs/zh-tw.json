@@ -167,10 +167,8 @@
   "ribbon": {
     "server": "伺服器",
     "browser": "資料瀏覽器",
-    "log": "日誌",
-    "wechat_official": "微信公眾號",
-    "follow_x": "關注我的\uD835\uDD4F",
-    "github": "Github"
+    "log": "日誌"
+    
   },
   "dialogue": {
     "close_confirm": "是否關閉此連線（{name}）",
